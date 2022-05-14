@@ -21,7 +21,6 @@ const UserSchema = new Schema({
     type: String,
     required: [true, 'Please add a password'],
     minlength: [6, 'Password must be at least 6 characters'],
-    maxlength: [50, 'Password can not be more than 50 characters'],
     select: false,
   },
 }) 
