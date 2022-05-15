@@ -1,28 +1,33 @@
-#### Setup
+<h4 align="center">Jobs API</h4>
 
-```bash
-npm install && npm start
-```
+## Project Overview 🎉
+Project created from John Smigla [tutorial](https://www.freecodecamp.org/news/build-six-node-js-and-express-js/).
+Project is a CRUD REST API with authorization and authentication.
 
-#### Database Connection
+## [Live](https://jobs-api-mp.herokuapp.com/) 📍
 
-1. Import connect.js
-2. Invoke in start()
-3. Setup .env in the root
-4. Add MONGO_URI with correct value
+## Tech/framework used 🔧
 
-#### Routers
+| Tech                                                    | Description                              |
+| ------------------------------------------------------- | ---------------------------------------- |
+| [Express](https://expressjs.com/)                             | Node.js web application framework   |
+| [MongoDB](https://www.mongodb.com/)                           | Document-oriented NoSQL database used for high volume data storage.   |
+| [Mongoose](https://mongoosejs.com/)                           | Elegant mongodb object modeling for node.js   |
 
-- auth.js
-- jobs.js
 
-#### User Model
+## Screenshots 📺
 
-Email Validation Regex
+<p align="center">
+    <img src="https://cdn.discordapp.com/attachments/917864818189418576/975471652462796840/unknown.png" alt="Image of Swagger implemantation">
+</p>
 
-```regex
-/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-```
+## Available scripts
+
+| Command                   | Description                   |
+| ------------------------- | ----------------------------- |
+| `npm run start`           | Open local server             |
+
+## Code Example/Issues 🔍
 
 #### Register User
 
@@ -55,15 +60,19 @@ Email Validation Regex
 - xss-clean
 - express-rate-limit
 
-Swagger UI
+#### Deploying app on heroku
+#### Create a swagger for a project
 
-```yaml
-/jobs/{id}:
-  parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-      required: true
-      description: the job id
+## Installation 💾
+
+1. Create account and database in mongodb.com
+2. Create .env in the root
+3. Add MONGO_URI with correct value
+4. Add JWT_EXPIRES with custom value
+5. Add JWT_SECRET with custom value
+
+Then run:
+
+```bash
+npm install && npm start
 ```
