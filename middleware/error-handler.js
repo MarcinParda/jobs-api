@@ -22,6 +22,11 @@ const errorHandlerMiddleware = (err, req, res, next) => {
     customError.statusCode = 400;
   }
 
+  if (err.name === 'CastError') {
+    customError.msg = `${err.value} is not a valid ${err.kind}`;
+    customError.statusCode = 404;
+  }
+
   return res.status(customError.statusCode).json({ msg: customError.msg });
 };
 
